@@ -18,12 +18,15 @@ namespace Arkanoid_IT2
         {
             Size = size;
         }
-
+        
         public override void Draw(Canvas canvas)
         {
-             for (int i = 0; i < 5; i++)
-             {
-                  for (int j = 0; j < 6; j++)
+            double startX = (canvas.ActualWidth) / 2 - 550;
+            double startY = (canvas.ActualHeight);
+            
+            for (int i = 0; i < 5; i++)
+            {
+                  for (int j = 0; j < 10; j++)
                   {
                         Rectangle rectangle = new Rectangle
                         {
@@ -32,12 +35,13 @@ namespace Arkanoid_IT2
                             Fill = Brushes.DeepSkyBlue
                         };
 
-                        Canvas.SetTop(rectangle, 20 + i * 25); // Každý další řádek dolů o 25 pixelů
-                        Canvas.SetLeft(rectangle, Location.X + j * (Size + 5)); // Každý další obdélník doprava o (Size + 5) pixelů
+                        Canvas.SetTop(rectangle, 100 + i * 25); // Každý další řádek dolů o 25 pixelů
+                        Canvas.SetLeft(rectangle,startX + j * (Size + 5)); // Každý další obdélník doprava o (Size + 5) pixelů
 
                         canvas.Children.Add(rectangle);
                   }
-             }
+            }
+            
         }
     }
 }

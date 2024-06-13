@@ -37,7 +37,7 @@ namespace Arkanoid_IT2
   {
    board = new Board(100);
    ball = new Ball(20);
-   Bloky = new bloky(50);
+   Bloky = new bloky(100);
    ball.Location = new Point(100, 100);
    ball.MoveVector = new Vector(5,5);
    GameObjects.Add(board);

@@ -30,20 +30,7 @@ namespace Arkanoid_IT2
    InitializeComponent();
             this.KeyDown += new KeyEventHandler(Onkeydown); 
   }
-        private const int PaddleWidth = 100;
-        private const int PaddleHeight = 20;
-        private const int BallDiameter = 20;
-        private const int BlockWidth = 75;
-        private const int BlockHeight = 20; // Updated height to match bloky
-        private const int BlockRows = 4;
-        private const int BlockColumns = 5;
-
-        private Rectangle paddle;
-        private Ellipse ball;
-        private double ballDX = 4;
-        private double ballDY = -4;
-        private DispatcherTimer timer;
-        private List<bloky> blocks;
+        
 
         private void MenuPrototype()
   {
