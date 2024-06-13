@@ -15,6 +15,7 @@ namespace Arkanoid_IT2
     {
         public double Size { get; set; }
         public Vector MoveVector { get; set; }
+        
         //private object board;
 
         public Ball(double size)
@@ -47,7 +48,13 @@ namespace Arkanoid_IT2
             //odraz od desky ale nefunguje
             //if (Location = board.Location)
             //{
-                //MoveVector = new Vector(-MoveVector.X, MoveVector.Y);
+            //MoveVector = new Vector(-MoveVector.X, MoveVector.Y);
+            //}
+            //odraz od bloků
+            //if (Location.Y = bloky.Location || Location.X = bloky.Bottom )
+            //{
+               // MoveVector = new Vector(-MoveVector.X, MoveVector.Y);
+
             //}
         }
     }
