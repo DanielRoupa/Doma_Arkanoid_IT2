@@ -11,7 +11,9 @@ namespace Arkanoid_IT2
 {
  public class Board : GameObject
  {
-  public int Size { get; }
+        public double Width { get; set; }
+        public double Height { get; set; }
+        public int Size { get; }
 
   public Board(int size)
   {

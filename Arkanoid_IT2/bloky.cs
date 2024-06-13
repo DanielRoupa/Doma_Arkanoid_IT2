@@ -41,7 +41,6 @@ namespace Arkanoid_IT2
                         canvas.Children.Add(rectangle);
                   }
             }
-            
         }
     }
 }
