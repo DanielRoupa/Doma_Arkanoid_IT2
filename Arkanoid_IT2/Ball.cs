@@ -45,6 +45,15 @@ namespace Arkanoid_IT2
             {
                 MoveVector = new Vector(-MoveVector.X, MoveVector.Y);
             }
+            Rect ballRect = new Rect(Location.X - Size / 2, Location.Y - Size / 2, Size, Size);
+            Rect boardRect = new Rect(board.Location.X - board.Width / 2, board.Location.Y, board.Width, board.Height);
+
+            if (ballRect.IntersectsWith(boardRect))
+            {
+                MoveVector = new Vector(MoveVector.X, -MoveVector.Y);
+                // Posun míčku nad desku, aby se předešlo opakovaným kolizím
+                Location = new Point(Location.X, board.Location.Y - Size / 2 - 1);
+            }
         }
     }
 }

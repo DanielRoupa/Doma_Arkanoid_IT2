@@ -32,7 +32,7 @@ namespace Arkanoid_IT2
   }
         
 
-        private void MenuPrototype()
+  private void MenuPrototype()
   {
    int w = 200;
    int h = 200;

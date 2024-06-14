@@ -16,20 +16,23 @@ namespace Arkanoid_IT2
         public int Size { get; }
         public Rectangle rectangle = new Rectangle();
 
-  public Board(int size)
-  {
-   Size = size;
-  }
+    public Board(int size)
+    {
+        Size = size;
+    }
 
-  public override void Draw(Canvas canvas)
-  {
-   
-   rectangle.Width = Size;
-   rectangle.Height = 20;
-   rectangle.Fill = Brushes.White;
-   Canvas.SetBottom(rectangle, 20);
-   Canvas.SetLeft(rectangle, Location.X - Size / 2);
-   canvas.Children.Add(rectangle);
-  }
+        public override void Draw(Canvas canvas)
+        {
+
+            ImageBrush imageBrush = new ImageBrush();
+            imageBrush.ImageSource = new System.Windows.Media.Imaging.BitmapImage(new Uri("pack://C:\\Users\\Danek\\Downloads\\Arkanoid_IT2_Nov--master\\Arkanoid_IT2\\Images\\blockBackground.JPG"));
+
+            rectangle.Width = Size + 200;
+            rectangle.Height = 100;
+            rectangle.Fill = imageBrush;
+            Canvas.SetBottom(rectangle, 20);
+            Canvas.SetLeft(rectangle, Location.X - (Size + 200) / 2);
+            canvas.Children.Add(rectangle);
+        }
  }
 }
