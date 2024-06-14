@@ -52,7 +52,7 @@ namespace Arkanoid_IT2
 
         public void Move(Rectangle rectangle)
         {
-            ball.Move(rectangle);
+            ball.Move(rectangle, board);
         }
 
         public void Draw(Canvas canvas)

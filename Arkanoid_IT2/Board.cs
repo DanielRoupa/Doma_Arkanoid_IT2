@@ -14,6 +14,7 @@ namespace Arkanoid_IT2
         public double Width { get; set; }
         public double Height { get; set; }
         public int Size { get; }
+        public Rectangle rectangle = new Rectangle();
 
   public Board(int size)
   {
@@ -22,9 +23,9 @@ namespace Arkanoid_IT2
 
   public override void Draw(Canvas canvas)
   {
-   Rectangle rectangle = new Rectangle();
+   
    rectangle.Width = Size;
-   rectangle.Height = 15;
+   rectangle.Height = 20;
    rectangle.Fill = Brushes.White;
    Canvas.SetBottom(rectangle, 20);
    Canvas.SetLeft(rectangle, Location.X - Size / 2);

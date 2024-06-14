@@ -15,8 +15,8 @@ namespace Arkanoid_IT2
     {
         public double Size { get; set; }
         public Vector MoveVector { get; set; }
+        public Ellipse ball = new Ellipse();
         
-        //private object board;
 
         public Ball(double size)
         {
@@ -25,16 +25,16 @@ namespace Arkanoid_IT2
 
         public override void Draw(Canvas canvas)
         {
-            Ellipse ellipse = new Ellipse();
-            ellipse.Width = Size;
-            ellipse.Height = Size;
-            ellipse.Fill = Brushes.White;
-            Canvas.SetTop(ellipse, Location.Y - Size / 2);
-            Canvas.SetLeft(ellipse, Location.X - Size / 2);
-            canvas.Children.Add(ellipse);
+            
+            ball.Width = Size;
+            ball.Height = Size;
+            ball.Fill = Brushes.White;
+            Canvas.SetTop(ball, Location.Y - Size / 2);
+            Canvas.SetLeft(ball, Location.X - Size / 2);
+            canvas.Children.Add(ball);
         }
 
-        public void Move(Rectangle rectangle)
+        public void Move(Rectangle rectangle, Board board)
         {
             Location  = Point.Add(Location, MoveVector);
             if (Location.Y > rectangle.Height || Location.Y < 0)
@@ -45,17 +45,11 @@ namespace Arkanoid_IT2
             {
                 MoveVector = new Vector(-MoveVector.X, MoveVector.Y);
             }
-            //odraz od desky ale nefunguje
-            //if (Location = board.Location)
-            //{
-            //MoveVector = new Vector(-MoveVector.X, MoveVector.Y);
-            //}
-            //odraz od bloků
-            //if (Location.Y = bloky.Location || Location.X = bloky.Bottom )
-            //{
-               // MoveVector = new Vector(-MoveVector.X, MoveVector.Y);
 
-            //}
+            if (board.IntersectsWith(ball))
+            {
+
+            }
         }
     }
 }
