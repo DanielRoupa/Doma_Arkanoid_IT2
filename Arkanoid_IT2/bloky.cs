@@ -23,7 +23,9 @@ namespace Arkanoid_IT2
         {
             double startX = (canvas.ActualWidth) / 2 - 550;
             double startY = (canvas.ActualHeight);
-            
+
+            ImageBrush imageBrush = new ImageBrush();
+            imageBrush.ImageSource = new System.Windows.Media.Imaging.BitmapImage(new Uri("pack://C:\\Users\\Danek\\Downloads\\Arkanoid_IT2_Nov--master\\Arkanoid_IT2\\Images\\blockBackground.JPG"));
             for (int i = 0; i < 5; i++)
             {
                   for (int j = 0; j < 10; j++)
@@ -32,7 +34,7 @@ namespace Arkanoid_IT2
                         {
                             Width = Size,
                             Height = 20,
-                            Fill = Brushes.DeepSkyBlue
+                            Fill = imageBrush
                         };
 
                         Canvas.SetTop(rectangle, 100 + i * 25); // Každý další řádek dolů o 25 pixelů

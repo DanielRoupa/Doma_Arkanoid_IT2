@@ -7,4 +7,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\blockBackground.JPG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\blockBackground.JPG" />
+  </ItemGroup>
+
 </Project>

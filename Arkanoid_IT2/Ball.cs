@@ -45,11 +45,6 @@ namespace Arkanoid_IT2
             {
                 MoveVector = new Vector(-MoveVector.X, MoveVector.Y);
             }
-
-            if (board.IntersectsWith(ball))
-            {
-
-            }
         }
     }
 }
